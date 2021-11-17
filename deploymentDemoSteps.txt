@@ -38,4 +38,6 @@
 
     "start": "node server/index.js"<<is going to run the file, make sure there is no comma at the end of it
 
-18. Now kill server and create a repository. Go to github
+18. Now kill server and create a repository. Go to github. Create a new repository. Create a gitignore for node_modules, unlike me, and follow all the commands for the new repository. 
+
+19. 
