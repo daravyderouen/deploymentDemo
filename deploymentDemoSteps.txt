@@ -1,0 +1,41 @@
+1. create a server folder
+2. insider of server folder, create index.js
+3. Our apps is going to need npm packages, node just runs the files and reads it once, nodemon runs the file until we kill it, these are completely different from npm. NPM is just a store. We can go to npm and use that code in our application. Right now we have no connection with npm 
+    so we need to be in the right folder for npm init -y
+4. package.json appears
+5. click on package.json, theres no dependencies yet. Now get express:
+    npm i express
+6. it created a node modules, express got added to package.json
+7. If you run npm init, it will give you options to pathways, npm init -y will get you everything you need. 
+8. Build out our server. boiler plate code in server folder, index.js
+9-11 If you put single quotes on a string, you can't put double quotes in it. Our boiler plate in index.js:
+    const express = require("express");
+
+    const path = require('path');
+
+    const app = express()
+
+12-13. set up server port in index.jx:
+    const port = process.env.PORT || 4005
+    app.listen(port, () => {
+    console.log(`My app is JAMMIN on port number ${port}`)
+    })
+
+14. run nodemon in terminal:
+     nodemon index.js
+
+15. Make a get request: when this endpoint is hit. respond by sending a file. What is the file I'm going to be sending, and it's expecting an absolute file package. I want to look specifically at a certain file. What path.join does is return that file path. dirname represents the file name, and string is relative file path. 
+
+    app.get("/", (req, res) => {
+    res.sendFile(path.join(__dirname, '../index.html'));
+    }) 
+
+16. Created a Procfile and write this on the first line:            
+        web:npm start 
+17. package.json: under "scripts" add a comma after test
+    add "start": "node server/index.js"
+    add to main: "main": "server/index.js",<<the name of the file
+
+    "start": "node server/index.js"<<is going to run the file, make sure there is no comma at the end of it
+
+18. Now kill server and create a repository. Go to github
