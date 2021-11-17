@@ -40,4 +40,8 @@
 
 18. Now kill server and create a repository. Go to github. Create a new repository. Create a gitignore for node_modules, unlike me, and follow all the commands for the new repository. 
 
-19. 
+19. Go to Heroku website. Log in. Create new app
+20. Deployment-Demo-Daravy create app. 
+21. Deploy, connect to github, put in deploymentDemo or file name and connect
+22. Select manual deploy for this once
+23. Click view and you can see your stuff it's now LIVE!! 
